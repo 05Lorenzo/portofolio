@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio — Nama Anda</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+    section { padding: 60px 0; }
+
+    /* Header / Profil */
+    header {
+      text-align: center;
+      padding: 80px 20px 60px;
+      background: linear-gradient(180deg, #111c33 0%, var(--bg) 100%);
+    }
+    header img {
+      width: 130px; height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--accent);
+      margin-bottom: 20px;
+    }
+    header h1 { font-size: 2rem; margin-bottom: 8px; }
+    header p.tagline { color: var(--muted); font-size: 1.05rem; margin-bottom: 16px; }
+    header p.desc { max-width: 600px; margin: 0 auto; color: var(--muted); }
+
+    h2.section-title {
+      font-size: 1.5rem;
+      margin-bottom: 24px;
+      border-left: 4px solid var(--accent);
+      padding-left: 12px;
+    }
+
+    /* Software Desain */
+    .software-list { display: flex; flex-wrap: wrap; gap: 12px; }
+    .software-list span {
+      background: var(--card);
+      padding: 8px 18px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      border: 1px solid #334155;
+    }
+
+    /* Pengalaman Kerja */
+    .timeline { border-left: 2px solid #334155; padding-left: 24px; }
+    .job { margin-bottom: 28px; position: relative; }
+    .job::before {
+      content: "";
+      position: absolute;
+      left: -31px; top: 6px;
+      width: 12px; height: 12px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+    .job h3 { font-size: 1.1rem; }
+    .job .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 6px; }
+    .job p { color: var(--muted); font-size: 0.95rem; }
+
+    /* Galeri Karya */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .gallery figure {
+      background: var(--card);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #334155;
+      transition: transform 0.2s;
+    }
+    .gallery figure:hover { transform: translateY(-4px); }
+    .gallery img {
+      width: 100%; height: 180px;
+      object-fit: cover;
+      display: block;
+      background: #0b1220;
+    }
+    .gallery figcaption {
+      padding: 12px 14px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .gallery figcaption strong {
+      display: block;
+      color: var(--text);
+      font-size: 1rem;
+      margin-bottom: 2px;
+    }
+
+    /* Kontak */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+    }
+    .contact-grid a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--card);
+      padding: 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: var(--text);
+      border: 1px solid #334155;
+      transition: border-color 0.2s, background 0.2s;
+      font-size: 0.95rem;
+    }
+    .contact-grid a:hover { border-color: var(--accent); background: #24344d; }
+    .contact-grid .icon { font-size: 1.3rem; }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid #1e293b;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== PROFIL ===== -->
+  <header>
+    <!-- Ganti src dengan foto Anda, contoh: src="foto-profil.jpg" -->
+    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=300&q=80" alt="Foto Profil" />
+    <h1>Nama Anda</h1>
+    <p class="tagline">UI/UX &amp; Graphic Designer</p>
+    <p class="desc">
+      Desainer dengan pengalaman membuat identitas visual, antarmuka digital,
+      dan materi promosi. Suka mengeksplorasi tipografi, warna, dan pengalaman pengguna.
+    </p>
+  </header>
+
+  <div class="container">
+
+    <!-- ===== SOFTWARE DESAIN ===== -->
+    <section>
+      <h2 class="section-title">Software Desain</h2>
+      <div class="software-list">
+        <span>Figma</span>
+        <span>Adobe Illustrator</span>
+        <span>Adobe Photoshop</span>
+        <span>Adobe InDesign</span>
+        <span>Canva</span>
+        <span>Blender (dasar)</span>
+      </div>
+    </section>
+
+    <!-- ===== PENGALAMAN KERJA ===== -->
+    <section>
+      <h2 class="section-title">Pengalaman Kerja</h2>
+      <div class="timeline">
+        <div class="job">
+          <h3>Graphic Designer — PT Kreatif Nusantara</h3>
+          <p class="meta">2023 — Sekarang · Jakarta</p>
+          <p>Merancang konten visual untuk media sosial, materi promosi, dan brand guideline klien.</p>
+        </div>
+        <div class="job">
+          <h3>UI Designer (Intern) — Startup Digital</h3>
+          <p class="meta">2022 — 2023 · Remote</p>
+          <p>Membuat wireframe dan prototipe aplikasi mobile, berkolaborasi dengan tim developer.</p>
+        </div>
+        <div class="job">
+          <h3>Freelance Designer</h3>
+          <p class="meta">2021 — Sekarang</p>
+          <p>Menangani desain logo, poster, dan feed Instagram untuk UMKM dan komunitas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5 KATEGORI DESAIN ===== -->
+    <section>
+      <h2 class="section-title">Portofolio Karya</h2>
+      <div class="gallery">
+
+        <!-- Kategori 1: Branding -->
+        <figure>
+          <img src="https://images.unsplash.com/photo-1600508774634-4e11d34730e2?w=600&q=80" alt="Desain Branding" />
+          <figcaption>
+            <strong>Branding</strong>
+            Identitas visual &amp; logo
+          </figcaption>
+        </figure>
+
+        <!-- Kategori 2: UI/UX -->
+        <figure>
+          <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=600&q=80" alt="Desain UI/UX" />
+          <figcaption>
+            <strong>UI/UX Design</strong>
+            Aplikasi mobile &amp; web
+          </figcaption>
+        </figure>
+
+        <!-- Kategori 3: Poster -->
+        <figure>
+          <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80" alt="Desain Poster" />
+          <figcaption>
+            <strong>Poster &amp; Print</strong>
+            Media cetak &amp; promosi
+          </figcaption>
+        </figure>
+
+        <!-- Kategori 4: Media Sosial -->
+        <figure>
+          <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80" alt="Desain Media Sosial" />
+          <figcaption>
+            <strong>Social Media</strong>
+            Feed &amp; story Instagram
+          </figcaption>
+        </figure>
+
+        <!-- Kategori 5: Ilustrasi -->
+        <figure>
+          <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&q=80" alt="Ilustrasi Digital" />
+          <figcaption>
+            <strong>Ilustrasi Digital</strong>
+            Artwork &amp; karakter
+          </figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+    <!-- ===== KONTAK ===== -->
+    <section>
+      <h2 class="section-title">Kontak</h2>
+      <div class="contact-grid">
+        <a href="https://wa.me/6281234567890" target="_blank" rel="noopener">
+          <span class="icon">💬</span> WhatsApp
+        </a>
+        <a href="https://instagram.com/username" target="_blank" rel="noopener">
+          <span class="icon">📸</span> Instagram
+        </a>
+        <a href="mailto:email@example.com">
+          <span class="icon">✉️</span> Email
+        </a>
+        <a href="https://linkedin.com/in/username" target="_blank" rel="noopener">
+          <span class="icon">💼</span> LinkedIn
+        </a>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    &copy; 2026 Nama Anda. Dibuat dengan VS Code.
+  </footer>
+
+</body>
+</html>
